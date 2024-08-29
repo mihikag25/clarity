@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { Button, Link, Spacer } from "@nextui-org/react";
+import { Button, Spacer , Link } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import { ReactComponent as Logo } from "../../lib/logo2.svg";
 import { IconBug } from "@tabler/icons-react";
+
 
 import { AcmeIcon } from "./social";
 
@@ -19,11 +20,11 @@ const navLinks = [
   //   },
   {
     name: "Legal Stuff",
-    href: "#",
+    href: "/legalStuff",
   },
   {
     name: "Privacy Policy",
-    href: "#",
+    href: "/privacyPolicy",
   },
   {
     name: "Contact",
@@ -94,15 +95,15 @@ export default function Component() {
 
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
           {navLinks.map((item) => (
-            <Link
+            <a
               key={item.name}
-              isExternal
+              //isExternal
               className="text-default-500"
               href={item.href}
               size="sm"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </div>
         {/* <Spacer y={6} /> */}
